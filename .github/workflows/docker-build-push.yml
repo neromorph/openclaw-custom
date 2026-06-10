@@ -27,9 +27,6 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Pull latest base image
-        run: docker pull ghcr.io/openclaw/openclaw:latest
-
       - name: Build and push image
         uses: docker/build-push-action@v6
         with:

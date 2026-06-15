@@ -1,4 +1,4 @@
-FROM ghcr.io/openclaw/openclaw:2026.6.5-slim
+FROM ghcr.io/openclaw/openclaw:2026.6.6-slim
 
 USER root
 
@@ -27,6 +27,7 @@ RUN python3 -m venv /opt/openclaw-venv && \
       pandas \
       pyyaml \
       python-telegram-bot \
+      'markitdown[all]' \
       s3cmd==2.4.0
 
 ENV PATH="/opt/openclaw-venv/bin:${PATH}"

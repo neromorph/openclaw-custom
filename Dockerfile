@@ -32,7 +32,7 @@ RUN python3 -m venv /opt/openclaw-venv && \
 
 ENV PATH="/opt/openclaw-venv/bin:${PATH}"
 
-RUN npm install -g @bitwarden/cli
+RUN npm install --global @bitwarden/cli ntn
 
 RUN install -m 0755 -d /etc/apt/keyrings && \
     curl -fsSL https://download.docker.com/linux/debian/gpg -o /tmp/docker.asc && \

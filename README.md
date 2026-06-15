@@ -7,7 +7,7 @@ This repository builds a custom Docker image based on `ghcr.io/openclaw/openclaw
 The image extends OpenClaw with additional tools such as:
 
 - SSH, rsync, wget, netcat, ping, dnsutils
-- Python venv + pinned Python packages
+- Python venv with `requests`, `beautifulsoup4`, `pandas`, `pyyaml`, `python-telegram-bot`, `markitdown[all]`, and `s3cmd`
 - Docker CLI and Docker Compose plugin
 - kubectl, doctl, tsh
 - Bitwarden CLI

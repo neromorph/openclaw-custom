@@ -1,16 +1,16 @@
 # OpenClaw Custom Image
 
-This repository builds a custom Docker image based on `ghcr.io/openclaw/openclaw:latest` and publishes it to Docker Hub as `neromorph/openclaw:latest`.
+This repository builds a custom Docker image based on `ghcr.io/openclaw/openclaw:2026.6.9-slim` and publishes it to Docker Hub as `neromorph/openclaw:latest`.
 
 ## What is included
 
 The image extends OpenClaw with additional tools such as:
 
-- SSH, rsync, wget, netcat, ping, dnsutils
+- SSH, rsync, wget, netcat, ping, dnsutils, postgresql-client, sqlite3, unzip, jq, gnupg, build-essential
 - Python venv with `requests`, `beautifulsoup4`, `pandas`, `pyyaml`, `python-telegram-bot`, `markitdown[all]`, and `s3cmd`
 - Docker CLI and Docker Compose plugin
 - kubectl, doctl, tsh
-- Bitwarden CLI
+- Bitwarden CLI and `ntn` (npm globals)
 
 ## Create a public GitHub repository
 

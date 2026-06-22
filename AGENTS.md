@@ -24,7 +24,7 @@
 | Docker CLI (`docker-ce-cli`, `docker-compose-plugin`) | `apt-cache policy docker-ce-cli` after adding Docker repo, or check [Docker Debian repo](https://download.docker.com/linux/debian/dists/bookworm/stable/binary-amd64/Packages) |
 | Python packages (`requests`, `beautifulsoup4`, `pandas`, `pyyaml`, `python-telegram-bot`) | `pip index versions <package>` or `curl -s https://pypi.org/pypi/<package>/json | jq -r '.info.version'` |
 | `s3cmd` | `curl -s https://pypi.org/pypi/s3cmd/json | jq -r '.info.version'` |
-| `@bitwarden/cli` | `npm view @bitwarden/cli version` |
+| `@bitwarden/cli`, `ntn` | `npm view @bitwarden/cli version`, `npm view ntn version` |
 | `kubectl` | `curl -sL https://dl.k8s.io/release/stable.txt` |
 | `doctl` | `curl -s https://api.github.com/repos/digitalocean/doctl/releases/latest | jq -r '.tag_name'` |
 | `tsh` (Teleport) | Check [Teleport releases](https://github.com/gravitational/teleport/releases) — version is manually pinned |
@@ -35,5 +35,5 @@
 - The meaningful verification step is building the root `Dockerfile`.
 
 ## Gotchas
-- The base image is intentionally `ghcr.io/openclaw/openclaw:latest`.
+- The base image is intentionally `ghcr.io/openclaw/openclaw:2026.6.9-slim` (pinned tag).
 - Be careful with direct pushes after `Dockerfile` changes, because `main` publishes immediately.
